@@ -38,3 +38,17 @@ print(name_of_the_major)
 
 # If you don't specify a particular column you can use the .loc property to retrieve an entire row.
 print(clean_df.loc[43])
+
+# the highest mid-career salary:
+highest_Mid_Career_Median_Salary = clean_df['Mid-Career Median Salary'].max()
+print(highest_Mid_Career_Median_Salary)
+print(f"the index for the max mid career salary: {clean_df['Mid-Career Median Salary'].idxmax()}")
+print(clean_df['Undergraduate Major'][8])
+
+# the lowest starting major and mid-career salary:
+lowest_starting_and_mid_career = clean_df['Starting Median Salary'].min()
+print(lowest_starting_and_mid_career)
+print(clean_df['Undergraduate Major'].loc[clean_df['Starting Median Salary'].idxmax()])
+
+# the lowest mid-career salary and how much can people expect to earn with this degree:
+print(clean_df.loc[clean_df['Mid-Career Median Salary'].idxmax()])
