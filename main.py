@@ -63,3 +63,12 @@ print(highest_potential[['Undergraduate Major', 'Mid-Career 90th Percentile Sala
 # Majors with the Greatest Spread in Salaries
 highest_spread = clean_df.sort_values('Spread', ascending=False)
 print(highest_spread[['Undergraduate Major', 'Spread']].head())
+
+
+# count how many majors we have in each category:
+print(clean_df.groupby('Group').count())
+
+# to find the average salary by group:
+print(clean_df.groupby('Group').mean())
+
+pd.options.display.float_format = '{:,.2f}'.format
